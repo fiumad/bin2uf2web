@@ -1,0 +1,24 @@
+# Workspace-level ignores
+AGENTS.md
+
+# Node / Svelte artifacts
+node_modules/
+.svelte-kit/
+.vite/
+.output/
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Rust / wasm build output
+target/
+converter/target/
+
+# OS noise
+.DS_Store
+Thumbs.db
