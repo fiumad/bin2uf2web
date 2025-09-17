@@ -7,7 +7,7 @@ This tool provides a browser-based pipeline for turning FPGA bitstream `.bin` fi
 ## Features
 - Converts raw bitstream binaries into UF2 images with ChipDiscover-friendly metadata.
 - Generates randomized flash offsets inside the selected storage slot to avoid clobbering neighbouring payloads.
-- Exposes auto-clock and slot selection options
+- Exposes auto-clock and slot selection options that mirror the NYDesign workshop flow.
 - Runs completely in the browser via WebAssembly—no installs required for workshop attendees.
 
 ## Project Layout
@@ -49,5 +49,13 @@ This refreshes `converter.js`, `converter_bg.wasm`, and the associated TypeScrip
 - **Conversion errors about slot size**: The bitstream is larger than the reserved space for that slot—trim the design or pick another slot.
 - **Auto-clock validation failures**: Stick to the documented 10 Hz–60 MHz range; the firmware enforces it.
 - **Browser complains about WASM**: Rebuild the converter with `wasm-pack` and ensure the refreshed artifacts are committed.
+
+## GitHub Pages Deployment
+- **Install dependencies**: `cd frontend && npm install` (required once on CI).
+- **Configure base path**: tell the build where it will live. For a project published at `https://<user>.github.io/<repo>/`, build with `VITE_BASE_PATH=/<repo> npm run build` inside `frontend/`. Local dev stays `npm run dev` with no extra env vars.
+- **Publish the static build**: the SvelteKit static adapter emits to `frontend/build/`. Push that directory to a `gh-pages` branch (e.g., via `npx gh-pages -d build` or a GitHub Action) and enable the Pages site from that branch in the repo settings.
+- **Keep WASM fresh**: whenever `converter/src` changes, rerun the `wasm-pack` command above before rebuilding so GitHub Pages serves the latest `converter_bg.wasm`.
+
+With that in place, every `npm run build` generates a GitHub Pages-ready bundle.
 
 Enjoy!
