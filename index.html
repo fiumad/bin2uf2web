@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/0.Chi4y3GF.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.DXY3DUsN.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bs9c578F.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Dc6l01TL.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/dyQFexKm.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.DyZ31OdU.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DsnmJJEf.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BypayQh6.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.CKe_V2M6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bm0bojIj.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.6MRy0Hzy.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CsmJTijE.js"><!--[--><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMwZjE3MmEiIC8+CiAgPHBhdGggZD0iTTE0IDE0aDIwbDggOHYyNEgxNHoiIGZpbGw9IiNmOGZhZmMiIC8+CiAgPHBhdGggZD0iTTM0IDE0djhoOHoiIGZpbGw9IiNlMmU4ZjAiIC8+CiAgPHRleHQgeD0iMjQiIHk9IjMyIiBmb250LWZhbWlseT0iJ0lCTSBQbGV4IE1vbm8nLCBtb25vc3BhY2UiIGZvbnQtc2l6ZT0iOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzMzNDE1NSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QklOPC90ZXh0PgogIDxwYXRoIGQ9Ik0zMCAzM2gxMmwtMy0zIDItMiA3IDctNyA3LTItMiAzLTNIMzB6IiBmaWxsPSIjMzhiZGY4IiAvPgogIDxyZWN0IHg9IjM2IiB5PSIyOCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiByeD0iNCIgZmlsbD0iIzFlMjkzYiIgc3Ryb2tlPSIjMzhiZGY4IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPHRleHQgeD0iNDYiIHk9IjQxIiBmb250LWZhbWlseT0iJ0lCTSBQbGV4IE1vbm8nLCBtb25vc3BhY2UiIGZvbnQtc2l6ZT0iOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2Y4ZmFmYyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VUYyPC90ZXh0PgogIDxjaXJjbGUgY3g9IjIwIiBjeT0iNDAiIHI9IjEuNSIgZmlsbD0iIzM4YmRmOCIgb3BhY2l0eT0iMC42IiAvPgogIDxjaXJjbGUgY3g9IjI0IiBjeT0iNDQiIHI9IjEuNSIgZmlsbD0iIzM4YmRmOCIgb3BhY2l0eT0iMC42IiAvPgogIDxjaXJjbGUgY3g9IjE4IiBjeT0iNDYiIHI9IjEuNSIgZmlsbD0iIzM4YmRmOCIgb3BhY2l0eT0iMC42IiAvPgo8L3N2Zz4K"/><!--]--><!--[--><!--]--><title>BIN → UF2 Converter</title>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><!----><div class="min-h-screen bg-base-200"><div class="mx-auto flex w-full max-w-4xl flex-col gap-6 px-4 py-10"><div class="text-center"><h1 class="text-3xl font-bold">BIN → UF2 Converter</h1> <p class="mt-2 text-base-content/80">Convert FPGA bitstream binaries into UF2 packets that match the efabless target profile.</p></div> <div class="card bg-base-100 shadow-xl"><div class="card-body space-y-6"><div class="grid gap-6 md:grid-cols-2"><label class="form-control w-full"><div class="label"><span class="label-text font-semibold">Bitstream (.bin) file</span></div> <input class="file-input file-input-bordered w-full" type="file" accept=".bin,application/octet-stream"/></label> <label class="form-control w-full"><div class="label"><span class="label-text font-semibold">Display name</span> <span class="label-text-alt">max 23 characters</span></div> <input class="input input-bordered" maxlength="23" placeholder="Optional project name" value=""/></label> <label class="form-control w-full"><div class="label"><span class="label-text font-semibold">Slot</span></div> <select class="select select-bordered"><option value="1" selected>Slot 1</option><option value="2">Slot 2</option><option value="3">Slot 3</option><option value="4">Slot 4</option></select></label> <label class="form-control w-full"><div class="label"><span class="label-text font-semibold">Auto-clock (Hz)</span> <span class="label-text-alt">0 for default</span></div> <input class="input input-bordered" type="number" min="0" max="60000000" step="1" placeholder="10 - 60000000" value=""/></label></div> <label class="label cursor-pointer justify-start gap-3"><input type="checkbox" class="checkbox"/> <span class="label-text">Append slot number to the downloaded filename</span></label> <div class="flex flex-wrap items-center justify-between gap-3"><button class="btn btn-primary"><!--[!-->Convert to UF2<!--]--></button> <!--[!--><!--]--></div> <!--[!--><!--]--> <!--[!--><!--]--></div></div> <div class="card bg-base-100 shadow"><div class="card-body space-y-3 text-sm text-base-content/70"><h2 class="card-title text-base">Notes</h2> <ul class="list-disc space-y-1 pl-5"><li>The converter always targets the efabless UF2 profile.</li> <li>Bitstream names longer than 23 characters are truncated to match the metadata header
+            limit.</li> <li>Auto-clock values must fall between 10 Hz and 60 MHz; leave blank to retain the board default.</li> <li>Generated UF2 files stay in-browser; refresh to clear cached links.</li></ul></div></div></div></div><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_cmymib = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/bin2ufw_web"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.DXY3DUsN.js"),
+						import("./_app/immutable/entry/app.DyZ31OdU.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
